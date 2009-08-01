@@ -44,7 +44,7 @@ describe :kernel_raise, :shared => true do
     rescue ArgumentError => e
     end
     e.backtrace.should == b
-    e.message == "test message"
+    e.message.should == "test message"
   end
   
   it "calls Exception#exception when raising an existing Exception object" do
